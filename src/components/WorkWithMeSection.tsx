@@ -11,8 +11,7 @@ const WorkWithMeSection: React.FC = () => {
         {/* Profile Image */}
         <div className="mb-16">
           <div className="w-48 h-48 mx-auto rounded-full overflow-hidden bg-gray-200">
-            <img
-              src="Yellow And White Action Movie Poster.jpg"
+            <img src="naveen.jpg"
               alt="Naveen Kumar"
               className="w-full h-full object-cover"
             />
