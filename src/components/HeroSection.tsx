@@ -7,7 +7,7 @@ const HeroSection: React.FC = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&fit=crop"
+          src="navi.jpg"
           alt="Naveen Kumar"
           className="w-full h-full object-cover"
         />
