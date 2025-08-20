@@ -4,7 +4,7 @@ import { Star, Quote } from 'lucide-react';
 const ReviewsSection: React.FC = () => {
   const reviews = [
     {
-      name: "Sarah Johnson",
+      name: "Dinesh s",
       role: "Fashion Brand Director",
       company: "Luxe Fashion Co.",
       rating: 5,
@@ -12,7 +12,7 @@ const ReviewsSection: React.FC = () => {
       image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
     },
     {
-      name: "Michael Chen",
+      name: "Naveen K",
       role: "Creative Director",
       company: "Urban Style Magazine",
       rating: 5,
@@ -20,7 +20,7 @@ const ReviewsSection: React.FC = () => {
       image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
     },
     {
-      name: "Emma Rodriguez",
+      name: "Mohan",
       role: "Startup Founder",
       company: "TechStyle Innovations",
       rating: 5,
@@ -28,7 +28,7 @@ const ReviewsSection: React.FC = () => {
       image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
     },
     {
-      name: "David Thompson",
+      name: "David",
       role: "Marketing Manager",
       company: "Global Fashion House",
       rating: 5,
@@ -36,7 +36,7 @@ const ReviewsSection: React.FC = () => {
       image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
     },
     {
-      name: "Lisa Park",
+      name: "Sanjai",
       role: "E-commerce Director",
       company: "Fashion Forward",
       rating: 5,
@@ -44,7 +44,7 @@ const ReviewsSection: React.FC = () => {
       image: "https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
     },
     {
-      name: "James Wilson",
+      name: "Pooja Sanjai",
       role: "Brand Manager",
       company: "Elite Couture",
       rating: 5,
