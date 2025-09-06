@@ -27,30 +27,6 @@ const ReviewsSection: React.FC = () => {
       review: "The team at Deepware Studio delivered exactly what we needed for our tech startup. Their innovative approach and technical expertise helped us launch successfully. Highly recommended!",
       image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
     },
-    {
-      name: "David",
-      role: "Marketing Manager",
-      company: "Global Fashion House",
-      rating: 5,
-      review: "Naveen's strategic approach to fashion marketing and his creative execution have been instrumental in our brand's growth. His work consistently exceeds expectations.",
-      image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-    },
-    {
-      name: "Sanjai",
-      role: "E-commerce Director",
-      company: "Fashion Forward",
-      rating: 5,
-      review: "The collaboration with Naveen on our digital transformation was seamless. His understanding of both fashion and technology made him the perfect partner for our project.",
-      image: "https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-    },
-    {
-      name: "Pooja Sanjai",
-      role: "Brand Manager",
-      company: "Elite Couture",
-      rating: 5,
-      review: "Working with Naveen has been transformative for our brand. His creative vision, combined with his professional approach, delivered results that far exceeded our expectations.",
-      image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
-    }
   ];
 
   const renderStars = (rating: number) => {
