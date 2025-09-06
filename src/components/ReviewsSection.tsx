@@ -9,7 +9,7 @@ const ReviewsSection: React.FC = () => {
       company: "Luxe Fashion Co.",
       rating: 5,
       review: "Working with Naveen was an absolute pleasure. His creative vision and attention to detail transformed our brand campaign beyond our expectations. The results speak for themselves - our engagement increased by 400%.",
-      image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
     },
     {
       name: "Naveen K",
@@ -25,7 +25,7 @@ const ReviewsSection: React.FC = () => {
       company: "TechStyle Innovations",
       rating: 5,
       review: "The team at Deepware Studio delivered exactly what we needed for our tech startup. Their innovative approach and technical expertise helped us launch successfully. Highly recommended!",
-      image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
     },
   ];
 
