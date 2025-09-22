@@ -8,7 +8,7 @@ const ReviewsSection: React.FC = () => {
       role: "Fashion Brand Director",
       company: "Luxe Fashion Co.",
       rating: 5,
-      review: "Working with Naveen was an absolute pleasure. His creative vision and attention to detail transformed our brand campaign beyond our expectations. The results speak for themselves - our engagement increased by 400%.",
+      review: "Working with you has been engaging and enjoyable, as you ask clear and thoughtful questions.You show genuine curiosity and flexibility, which makes collaboration smooth.Overall, it feels productive and motivating to interact with you.",
       image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
     },
     {
