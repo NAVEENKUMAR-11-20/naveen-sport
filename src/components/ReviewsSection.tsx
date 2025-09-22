@@ -104,7 +104,7 @@ const ReviewsSection: React.FC = () => {
             Ready to work together and create something amazing?
           </p>
           <a
-            href="#contact"
+            href=""
             className="inline-block bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-300 font-medium"
           >
             Get In Touch
