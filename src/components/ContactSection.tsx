@@ -24,7 +24,7 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact-me" className="py-24 px-6 bg-white">
+    <section id="contact-me" className="py-24 px-6 bg-gray">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 tracking-tight">Contact Me</h2>
         
