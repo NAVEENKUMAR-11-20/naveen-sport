@@ -67,7 +67,6 @@ const HeroSection: React.FC = () => {
             { name: 'Collabs', href: '#collabs' },
             { name: 'Portfolio', href: '#portfolio' },
             { name: 'Startup', href: '#startup' },
-            { name: 'Reviews', href: '#reviews' },
             { name: 'Contact Me', href: '#contact' },
             { name: 'Merch', href: '#merch' }
           ].map((item) => (
