@@ -67,8 +67,6 @@ const HeroSection: React.FC = () => {
             { name: 'Collabs', href: '#collabs' },
             { name: 'Portfolio', href: '#portfolio' },
             { name: 'Startup', href: '#startup' },
-            { name: 'Contact Me', href: '#contact' },
-            { name: 'Merch', href: '#merch' }
           ].map((item) => (
             <div key={item.name} className="text-right">
               <a
