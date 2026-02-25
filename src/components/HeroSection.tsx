@@ -24,7 +24,7 @@ const HeroSection: React.FC = () => {
         {/* Social Icons */}
         <div className="flex space-x-6 mb-12 md:mb-16">
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/naveen-kumar-p-034658300/"
             className="text-white hover:text-gray-300 transition-colors duration-300"
             target="_blank"
             rel="noopener noreferrer"
@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
             <Linkedin size={28} />
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/NAVEENKUMAR-11-20"
             className="text-white hover:text-gray-300 transition-colors duration-300"
             target="_blank"
             rel="noopener noreferrer"
