@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Github, Twitter } from 'lucide-react';
+import { Linkedin, Github } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   return (
@@ -38,14 +38,6 @@ const HeroSection: React.FC = () => {
             rel="noopener noreferrer"
           >
             <Github size={28} />
-          </a>
-          <a
-            href="https://twitter.com"
-            className="text-white hover:text-gray-300 transition-colors duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Twitter size={28} />
           </a>
         </div>
 
