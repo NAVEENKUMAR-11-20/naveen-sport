@@ -42,7 +42,7 @@ const StartupSection: React.FC = () => {
         <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden bg-gray-200 rounded-lg mb-16">
           <img src="post1denvex.png"
             alt="DenveX"
-            className="w-full h-full object-cover"
+            className="w-80% h-80% object-cover"
           />
         </div>
 
