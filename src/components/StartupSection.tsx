@@ -40,9 +40,9 @@ const StartupSection: React.FC = () => {
 
         {/* Startup Hero Image */}
         <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden bg-gray-200 rounded-lg mb-16">
-          <img src="post1denvex.png"
+          <img src="/post1denvex.png"
             alt="DenveX"
-            className="w-80% h-100% object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
 
