@@ -30,10 +30,10 @@ const StartupSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-wide text-gray-800">
-            DeepWare Studio
+            DenveX
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Deepware Studio is my startup dedicated to creating modern, responsive websites that combine creativity with technology. 
+            DenveX is my startup dedicated to creating modern, responsive websites that combine creativity with technology. 
             We design and develop digital experiences that are functional, scalable, and user-friendly.
           </p>
         </div>
@@ -41,19 +41,19 @@ const StartupSection: React.FC = () => {
         {/* Startup Hero Image */}
         <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden bg-gray-200 rounded-lg mb-16">
           <img src="banner.jpg"
-            alt="Deepware Studio"
+            alt="DenveX"
             className="w-full h-full object-cover"
           />
         </div>
 
-        {/* About Deepware Studio */}
+        {/* About DenveX */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
           <div>
             <h3 className="text-2xl font-medium text-gray-800 mb-6">
               Our Mission
             </h3>
             <p className="text-gray-600 leading-relaxed mb-6">
-              At Deepware Studio, we harness the power of technology to transform creative ideas into reality.
+              At DenveX, we harness the power of technology to transform creative ideas into reality.
               Our mission is to craft innovative web solutions that empower individuals and businesses to achieve 
               their goals.
             </p>
