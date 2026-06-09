@@ -25,7 +25,12 @@ const ContactSection: React.FC = () => {
     setLoading(true);
     setErrorMsg('');
 
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    console.log({
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message
+    });
 
     emailjs.send(
       'service_p20zvps',
@@ -34,9 +39,9 @@ const ContactSection: React.FC = () => {
         from_name: formData.name,
         from_email: formData.email,
         subject: formData.subject,
-        message: formData.message
+        message: formData.message,
       },
-      publicKey
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
     .then((response) => {
       console.log('SUCCESS!', response.status, response.text);
@@ -46,8 +51,10 @@ const ContactSection: React.FC = () => {
         setSubmitted(false);
       }, 5000);
     })
-    .catch((err) => {
-      console.error('FAILED...', err);
+    .catch((error) => {
+      console.error("EMAILJS ERROR:", error);
+      console.error("STATUS:", error?.status);
+      console.error("TEXT:", error?.text);
       setErrorMsg('Failed to send message. Please try again later.');
     })
     .finally(() => {
