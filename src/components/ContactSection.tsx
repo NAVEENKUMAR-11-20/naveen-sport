@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send, ArrowUpRight } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -9,15 +10,49 @@ const ContactSection: React.FC = () => {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Submitted message:', formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
+    
+    // Validate fields
+    if (!formData.name.trim() || !formData.email.trim() || !formData.subject.trim() || !formData.message.trim()) {
+      setErrorMsg('Please fill in all fields.');
+      return;
+    }
+
+    setLoading(true);
+    setErrorMsg('');
+
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    emailjs.send(
+      'service_p20zvps',
+      'template_e5krw0q',
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message
+      },
+      publicKey
+    )
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      setSubmitted(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 4000);
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 5000);
+    })
+    .catch((err) => {
+      console.error('FAILED...', err);
+      setErrorMsg('Failed to send message. Please try again later.');
+    })
+    .finally(() => {
+      setLoading(false);
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -45,7 +80,7 @@ const ContactSection: React.FC = () => {
           <div className="lg:col-span-7">
             {submitted ? (
               <div className="p-10 border border-slate-900 bg-[#070707] text-center space-y-4">
-                <p className="text-xl font-medium text-white">Message received.</p>
+                <p className="text-xl font-medium text-white">Message sent successfully!</p>
                 <p className="text-sm text-slate-400">Thank you for writing. I will get back to you soon.</p>
               </div>
             ) : (
@@ -115,12 +150,19 @@ const ContactSection: React.FC = () => {
                   />
                 </div>
 
+                {errorMsg && (
+                  <p className="text-sm text-red-500 font-light mt-2">
+                    {errorMsg}
+                  </p>
+                )}
+
                 <button
                   type="submit"
-                  className="flex items-center justify-center gap-2.5 w-full py-4 bg-white hover:bg-slate-200 text-black font-semibold text-sm transition-colors group"
+                  disabled={loading}
+                  className="flex items-center justify-center gap-2.5 w-full py-4 bg-white hover:bg-slate-200 text-black font-semibold text-sm transition-colors group disabled:opacity-50"
                 >
                   <Send className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  Send Message
+                  {loading ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             )}
