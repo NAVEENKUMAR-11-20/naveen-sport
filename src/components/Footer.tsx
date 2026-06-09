@@ -30,15 +30,21 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Middle Side: Quick Nav Links */}
-        <div className="flex flex-col items-center gap-3 text-xs font-semibold text-slate-400">
-          <a href="#home" onClick={(e) => handleScrollTo(e, 'home')} className="hover:text-white transition-colors">Home</a>
-          <a href="#about" onClick={(e) => handleScrollTo(e, 'about')} className="hover:text-white transition-colors">About</a>
-          <a href="#skills" onClick={(e) => handleScrollTo(e, 'skills')} className="hover:text-white transition-colors">Skills</a>
-          <a href="#denvex" onClick={(e) => handleScrollTo(e, 'denvex')} className="hover:text-white transition-colors">DenveX</a>
-          <a href="#projects" onClick={(e) => handleScrollTo(e, 'projects')} className="hover:text-white transition-colors">Projects</a>
-          <a href="#journey" onClick={(e) => handleScrollTo(e, 'journey')} className="hover:text-white transition-colors">Journey</a>
-          <a href="#contact" onClick={(e) => handleScrollTo(e, 'contact')} className="hover:text-white transition-colors">Contact</a>
+        {/* Middle Side: Quick Nav Links in 2 Rows */}
+        <div className="flex flex-col items-center gap-4 text-xs font-semibold text-slate-400">
+          {/* Row 1 */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+            <a href="#home" onClick={(e) => handleScrollTo(e, 'home')} className="hover:text-white transition-colors">Home</a>
+            <a href="#about" onClick={(e) => handleScrollTo(e, 'about')} className="hover:text-white transition-colors">About</a>
+            <a href="#skills" onClick={(e) => handleScrollTo(e, 'skills')} className="hover:text-white transition-colors">Skills</a>
+            <a href="#denvex" onClick={(e) => handleScrollTo(e, 'denvex')} className="hover:text-white transition-colors">DenveX</a>
+          </div>
+          {/* Row 2 */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+            <a href="#projects" onClick={(e) => handleScrollTo(e, 'projects')} className="hover:text-white transition-colors">Projects</a>
+            <a href="#journey" onClick={(e) => handleScrollTo(e, 'journey')} className="hover:text-white transition-colors">Journey</a>
+            <a href="#contact" onClick={(e) => handleScrollTo(e, 'contact')} className="hover:text-white transition-colors">Contact</a>
+          </div>
         </div>
 
         {/* Right Side: Social Handles */}

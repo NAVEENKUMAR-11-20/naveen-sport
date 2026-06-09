@@ -11,7 +11,7 @@ interface JourneyItem {
 const JourneySection: React.FC = () => {
   const items: JourneyItem[] = [
     {
-      year: '2024 - Present',
+      year: '2025 - Present',
       role: 'Founder & CEO',
       company: 'DenveX',
       description: 'Set up DenveX to build custom, responsive websites and software solutions for client brands.',
@@ -22,7 +22,7 @@ const JourneySection: React.FC = () => {
       ]
     },
     {
-      year: '2023 - Present',
+      year: '2025 - Present',
       role: 'Web Developer Journey',
       company: 'Self-Directed Projects',
       description: 'Building custom web apps, learning core programming concepts, and mastering frontend/backend integrations.',
@@ -33,7 +33,7 @@ const JourneySection: React.FC = () => {
       ]
     },
     {
-      year: '2023 - 2024',
+      year: '2025 - 2026',
       role: 'Freelance & Client Delivery',
       company: 'Digital Projects',
       description: 'Worked on individual websites and digital resources directly helping local brands start their web footprint.',
@@ -46,50 +46,60 @@ const JourneySection: React.FC = () => {
   ];
 
   return (
-    <section id="journey" className="py-24 bg-black border-b border-slate-900">
-      <div className="max-w-6xl mx-auto px-6 md:px-12">
+    <section id="journey" className="relative py-28 bg-black border-b border-slate-900 overflow-hidden">
+      {/* Timeline image background with heavy overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" 
+          alt="Technical Pathway" 
+          className="w-full h-full object-cover opacity-15 filter grayscale"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-black" />
+      </div>
+
+      <div className="max-w-6xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Header Block */}
-        <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-light text-white tracking-wide">
+        <div className="mb-20">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-light text-white tracking-wide">
             Journey & Experience
           </h2>
-          <div className="w-16 h-[1px] bg-slate-800 mt-4" />
+          <div className="w-24 h-[1px] bg-slate-800 mt-4" />
         </div>
 
         {/* Timeline Layout */}
-        <div className="relative border-l border-slate-900 pl-6 md:pl-10 space-y-12">
+        <div className="relative border-l border-slate-800 pl-6 md:pl-10 space-y-12">
           {items.map((item, idx) => (
             <div key={idx} className="relative group">
               
               {/* Bullet Node */}
-              <div className="absolute -left-[31px] md:-left-[47px] top-1.5 w-3 h-3 rounded-full bg-black border border-slate-850" />
+              <div className="absolute -left-[31px] md:-left-[47px] top-2 w-3.5 h-3.5 rounded-full bg-black border border-slate-700" />
 
               {/* Box */}
-              <div className="p-6 border border-slate-950 bg-[#070707] hover:border-slate-900 transition-colors duration-300">
+              <div className="p-8 border border-slate-900 bg-[#070707]/90 backdrop-blur-sm hover:border-slate-850 transition-colors duration-300">
                 
-                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+                <span className="text-xs font-bold text-slate-500 uppercase tracking-widest">
                   {item.year}
                 </span>
 
-                <div className="mt-1 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                  <h3 className="text-base font-semibold text-white">
+                <div className="mt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <h3 className="text-xl font-semibold text-white">
                     {item.role}
                   </h3>
-                  <span className="text-xs font-medium text-slate-400">
+                  <span className="text-sm font-medium text-slate-400">
                     {item.company}
                   </span>
                 </div>
 
-                <p className="mt-3 text-xs text-slate-400 font-light leading-relaxed">
+                <p className="mt-4 text-sm sm:text-base text-slate-400 font-light leading-relaxed">
                   {item.description}
                 </p>
 
                 {/* Bullet details */}
-                <ul className="mt-4 space-y-2">
+                <ul className="mt-6 space-y-3">
                   {item.details.map((detail, dIdx) => (
-                    <li key={dIdx} className="flex items-start gap-2 text-[11px] text-slate-500 font-light">
-                      <span className="w-1 h-1 bg-slate-800 rounded-full mt-1.5 shrink-0" />
+                    <li key={dIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-400 font-light">
+                      <span className="w-1.5 h-1.5 bg-slate-800 rounded-full mt-2 shrink-0" />
                       <span>{detail}</span>
                     </li>
                   ))}

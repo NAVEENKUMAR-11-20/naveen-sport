@@ -8,21 +8,21 @@ const AboutSection: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="relative py-24 bg-black border-y border-slate-900 overflow-hidden">
+    <section id="about" className="relative py-28 bg-black border-y border-slate-900 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Header Block */}
-        <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-light text-white tracking-wide">
+        <div className="mb-20">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-light text-white tracking-wide">
             Developer & Founder
           </h2>
-          <div className="w-16 h-[1px] bg-slate-800 mt-4" />
+          <div className="w-24 h-[1px] bg-slate-800 mt-4" />
         </div>
 
-        <div className="grid md:grid-cols-12 gap-12">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Text */}
-          <div className="md:col-span-8 space-y-6 text-slate-400 font-light leading-relaxed text-sm sm:text-base">
-            <p>
+          <div className="lg:col-span-7 space-y-8 text-slate-300 font-light leading-relaxed text-base sm:text-lg">
+            <p className="text-lg sm:text-xl font-normal text-white">
               I am Naveen Kumar P, a developer based in Chennai, Tamil Nadu. I focus on writing clean code, building usable websites, and learning new tools to improve my work.
             </p>
             <p>
@@ -31,19 +31,29 @@ const AboutSection: React.FC = () => {
             <p>
               I enjoy finding simple ways to solve complex tasks. Whether I am styling a frontend layout or writing backend systems, I strive to make sure every line is purposeful.
             </p>
+
+            {/* Metrics */}
+            <div className="grid sm:grid-cols-3 gap-6 pt-6 border-t border-slate-900">
+              {stats.map((stat, idx) => (
+                <div 
+                  key={idx} 
+                  className="pb-4 border-b border-slate-900 sm:border-b-0 flex sm:flex-col justify-between sm:justify-start items-end sm:items-start gap-2"
+                >
+                  <span className="text-xs text-slate-500 uppercase tracking-wider font-semibold">{stat.label}</span>
+                  <span className="text-3xl font-light text-white font-sans">{stat.value}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Right Metrics */}
-          <div className="md:col-span-4 space-y-6">
-            {stats.map((stat, idx) => (
-              <div 
-                key={idx} 
-                className="py-4 border-b border-slate-800 flex justify-between items-end"
-              >
-                <span className="text-xs text-slate-500 uppercase tracking-wider font-medium">{stat.label}</span>
-                <span className="text-xl font-light text-white">{stat.value}</span>
-              </div>
-            ))}
+          {/* Right Image */}
+          <div className="lg:col-span-5 rounded-2xl overflow-hidden border border-slate-900 aspect-[4/5] bg-slate-950 relative group filter grayscale contrast-110 hover:grayscale-0 transition-all duration-700">
+            <div className="absolute inset-0 bg-black/20 z-10" />
+            <img 
+              src="naveend.png" 
+              alt="Developer Workspace" 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
           </div>
         </div>
 
