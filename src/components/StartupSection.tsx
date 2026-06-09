@@ -1,111 +1,86 @@
 import React from 'react';
-import { Rocket, Users, Target, TrendingUp } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 const StartupSection: React.FC = () => {
-  const features = [
-    {
-      icon: <Rocket className="w-6 h-6" />,
-      title: "Innovation First",
-      description: "Cutting-edge technology solutions for modern businesses"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Expert Team",
-      description: "Talented professionals dedicated to delivering excellence"
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Client Focus",
-      description: "Tailored solutions that meet specific business needs"
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Growth Driven",
-      description: "Strategies designed to scale and grow your business"
-    }
+  const services = [
+    { title: 'Web Development', desc: 'Custom website building with modern coding frameworks.' },
+    { title: 'UI/UX Design', desc: 'Simple, direct layouts planned for clear user interactions.' },
+    { title: 'Software Development', desc: 'Developing tailored tools to support company workflows.' },
+    { title: 'E-commerce Websites', desc: 'Online shops focusing on secure checkout and fast loading.' },
+    { title: 'Business Websites', desc: 'Corporate websites to highlight company profiles and details.' },
+    { title: 'Website Maintenance', desc: 'Routine updates, server speed checks, and secure maintenance.' },
   ];
 
   return (
-    <section id="startup" className="py-24 px-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-wide text-gray-800">
+    <section id="denvex" className="py-24 bg-black border-b border-slate-900">
+      <div className="max-w-6xl mx-auto px-6 md:px-12">
+        
+        {/* Header Block */}
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-light text-white tracking-wide">
             DenveX
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            DenveX is my startup dedicated to creating modern, responsive websites that combine creativity with technology. 
-            We design and develop digital experiences that are functional, scalable, and user-friendly.
-          </p>
+          <div className="w-16 h-[1px] bg-slate-800 mt-4" />
         </div>
 
-        {/* Startup Hero Image */}
-        <div className="overflow-hidden rounded-lg mb-16">
-          <img src="/post1denvex.png"
-            alt="DenveX"
-            className="w-full h-auto object-cover"
-          />
-        </div>
-
-        {/* About DenveX */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
-          <div>
-            <h3 className="text-2xl font-medium text-gray-800 mb-6">
-              Our Mission
+        {/* Contents Grid */}
+        <div className="grid md:grid-cols-12 gap-12 items-start">
+          
+          {/* Left Text */}
+          <div className="md:col-span-5 space-y-6">
+            <h3 className="text-xl font-medium text-white tracking-wide">
+              Official Agency
             </h3>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              At DenveX, we harness the power of technology to transform creative ideas into reality.
-              Our mission is to craft innovative web solutions that empower individuals and businesses to achieve 
-              their goals.
+            <p className="text-slate-400 font-light leading-relaxed text-sm">
+              DenveX is my startup focused on building clean, functional websites. We translate business ideas into responsive websites that work across all mobile and desktop devices.
             </p>
-            <p className="text-gray-600 leading-relaxed">
-             We specialize in responsive web development and creative digital experiences that leave a lasting impact.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-medium text-gray-800 mb-6">
-              What We Do
-            </h3>
-            <ul className="space-y-4 text-gray-600">
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-black rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                Custom Website Development & Design
+            <ul className="space-y-3 text-slate-400 font-light text-xs">
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-slate-700 rounded-full" />
+                Performance optimization
               </li>
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-black rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                Logo & Brand Identity Design
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-slate-700 rounded-full" />
+                Mobile first layouts
               </li>
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-black rounded-full mt-2 mr-3 flex-shrink-0"></span>          
-              Pamphlet & Brochure Design
-              </li>
-                            <li className="flex items-start">
-                <span className="w-2 h-2 bg-black rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                Creative Banners & Posters
-              </li>
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-black rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                Brand Identity & Creative Solutions
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-slate-700 rounded-full" />
+                Search engine structures
               </li>
             </ul>
+
+            <div className="pt-4">
+              <a
+                href="https://www.denvex.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs text-white hover:text-slate-300 font-medium pb-1 border-b border-white hover:border-slate-300 transition-all group"
+              >
+                Visit denvex.in
+                <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+            </div>
           </div>
+
+          {/* Right Services List */}
+          <div className="md:col-span-7 grid sm:grid-cols-2 gap-6">
+            {services.map((svc, idx) => (
+              <div 
+                key={idx}
+                className="p-5 border border-slate-900 bg-[#070707] hover:border-slate-800 transition-all duration-300"
+              >
+                <h4 className="text-sm font-semibold text-white mb-2 font-sans">
+                  {svc.title}
+                </h4>
+                <p className="text-xs text-slate-400 font-light leading-relaxed">
+                  {svc.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="text-center group">
-              <div className="flex justify-center mb-4 text-gray-600 group-hover:text-black transition-colors duration-300">
-                {feature.icon}
-              </div>
-              <h4 className="text-lg font-medium text-gray-800 mb-3">
-                {feature.title}
-              </h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
